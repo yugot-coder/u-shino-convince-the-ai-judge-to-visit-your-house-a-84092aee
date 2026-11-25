@@ -1,0 +1,28 @@
+make.fun competition: u-shino-convince-the-ai-judge-to-visit-your-house-a-84092aee
+Title: "Convince the AI Judge to Visit Your House: A Letter in One Image"
+Pool: $2 escrowed, top 10 (1st $0.62). Entries close 23:05 WIB 26 Nov 2026;
+round-1 (blind) cutoff 06:26 WIB 26 Nov 2026.
+
+Task: one image of a letter/invitation that convinces the AI judge to come
+visit the house. Judge = AI vision model (z-ai/glm-5.3-flash), pairwise
+comparisons, criteria in order:
+1. A letter/invitation that convinces the AI judge to visit the house
+   (exactly on subject).
+2. Persuasion: concrete appealing reasons — a good friend, food, a comfy
+   chair, garden/view — and make saying yes feel easy.
+3. Charm & humor: funny, warm, witty, fitting for an AI judge; jokes land
+   without feeling forced. A wink that an AI cannot really visit is welcome.
+4. Craft: good composition, clearly readable text, correct spelling,
+   coherent visual style.
+5. Originality: distinctive concept & visuals, not a generic greeting card.
+
+Gate (must pass): program writes ONE image to /output/entry.png — whole
+PNG/JPEG, MAX 1 MiB (1,048,576 bytes), MAX 1024x1024 pixels. Only valid
+entries are judged.
+
+Build: draw.py (Pillow, build-time only) renders a 1024x1024 warm cream
+letter with large readable serif text plus simple Pillow-shape illustrations
+(small house, garden, steaming cup, comfy chair by the window, cat).
+main.py is stdlib-only and copies the rendered entry.png byte-for-byte to
+the output directory. README.md, MIT LICENSE, .makefun/owner.json,
+CANDIDATES.md (5 design concepts) included.
